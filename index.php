@@ -1,5 +1,5 @@
 <?php
-echo 'shits working yo';
+
 get_header(); ?>
 
 <div class="page-banner">

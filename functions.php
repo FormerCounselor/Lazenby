@@ -1,5 +1,5 @@
 <?php
-echo 'Functions.php is working';
+
 
 function university_files()
 {

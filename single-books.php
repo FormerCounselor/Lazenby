@@ -1,5 +1,5 @@
 <?php
-echo 'Single-books.php is working';
+
 /* Template Name: Library */
 ?>
 <?php get_header(); ?>
@@ -15,8 +15,6 @@ echo 'Single-books.php is working';
   <?php
   // Get the ACF field value
   $template_type = get_field('template_type');
-  var_dump($template_type);
-
 
   // Use it to include different template parts
   if ($template_type == 'main-books-nav') {

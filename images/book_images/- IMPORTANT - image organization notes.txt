@@ -1,0 +1,7 @@
+Files have their image_id first in the name
+images with ids 35,37, and 44 were found to be redundant, and deleted, confusing the image_id 's a bit.
+
+Some book_id 's were also found to be redundant and deleted, creating the same gaps in the numbers.
+link_id 's were also affected when the image_id problem was found.
+
+image_id doens't match with book_id beginning in the bulk of the foreign translations near the end

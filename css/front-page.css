@@ -1,0 +1,370 @@
+.post-titles {
+  font-size: large;
+  font-weight: bold;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+.social-media-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr 0.4fr;
+  gap: 50px;
+}
+
+/* ***Twitter*** */
+
+.twitter-timeline {
+  /* Cutting off too many posts */
+  width: 300px;
+  height: 500px; /* !important; /* Adjust this value as needed */
+  overflow: hidden;
+  /* Social Media Grid */
+  grid-column: 1 / 3;
+  grid-row: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 12px 12px 12px 12px / 10px 10px 10px 10px;
+}
+
+.twitter-follow-button,
+.twitter-mention-button {
+  margin-top: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 12px 12px 12px 12px / 10px 10px 10px 10px;
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.twitter-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+/* ***Twitter*** */
+
+.blog {
+  grid-column: 2 / 3; /* Second column */
+}
+
+.instagram-profile {
+  grid-column: 3 / 4; /* Second column */
+  border-radius: 6px;
+}
+
+.instagram-profile .instagram-media {
+  background: #fff;
+  border: 0;
+  border-radius: 3px;
+  margin: 1px;
+  max-width: 540px;
+  min-width: 300px !important;
+  padding: 0;
+  width: calc(100% - 2px);
+}
+/*** IG ***/
+.instagram-media {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  /* CONTROLS WIDTH USE !IMPORTANT */
+  width: 300px !important;
+}
+
+.instagram-profile .instagram-media-content {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+}
+
+.instagram-profile .instagram-link {
+  background: #ffffff;
+  line-height: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.instagram-profile .profile-header,
+.instagram-profile .profile-actions,
+.instagram-profile .profile-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.instagram-profile .profile-avatar,
+.instagram-profile .profile-action-icon,
+.instagram-profile .profile-description-icon {
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  flex-grow: 0;
+  height: 40px;
+  margin-right: 14px;
+  width: 40px;
+}
+
+.instagram-profile .profile-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.instagram-profile .profile-name,
+.instagram-profile .profile-username {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  flex-grow: 0;
+  height: 14px;
+}
+
+.instagram-profile .profile-name {
+  margin-bottom: 6px;
+  width: 100px;
+}
+
+.instagram-profile .profile-username {
+  width: 60px;
+}
+
+.instagram-profile .cta-padding {
+  padding: 19% 0;
+}
+/* ... IG ... */
+@media (max-width: 1440px) {
+  .social-media-grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .social-media-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .twitter-timeline {
+    /* Cutting off too many posts */
+    width: 300px;
+    height: 70vh; /* !important; /* Adjust this value as needed */
+    overflow: hidden;
+    /* Social Media Grid */
+    grid-column: 1 / 3;
+    grid-row: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px 12px 12px 12px / 10px 10px 10px 10px;
+  }
+
+  .instagram-media {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    /* CONTROLS WIDTH USE !IMPORTANT */
+    width: 95vw !important;
+    margin: 0 auto;
+  }
+
+  .instagram-profile {
+    margin: 0 auto;
+  }
+
+  .blog-title {
+    margin: 1vw auto;
+    font-size: x-large;
+  }
+
+  .preview-post-title {
+    font-size: large;
+    margin-top: 1vh;
+  }
+
+  .blog {
+    padding: 0 2vw;
+  }
+
+  .twitter-timeline-div {
+    margin: 0 auto;
+    margin-top: 1vh;
+  }
+
+  .blog p {
+    margin: 0.5vh 0;
+  }
+
+  .tiny-text {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-media-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .twitter-timeline {
+    /* Cutting off too many posts */
+    width: 300px;
+    height: 70vh; /* !important; /* Adjust this value as needed */
+    overflow: hidden;
+    /* Social Media Grid */
+    grid-column: 1 / 3;
+    grid-row: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px 12px 12px 12px / 10px 10px 10px 10px;
+  }
+
+  .instagram-media {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    /* CONTROLS WIDTH USE !IMPORTANT */
+    width: 95vw !important;
+    margin: 0 auto;
+  }
+
+  .instagram-profile {
+    margin: 0 auto;
+  }
+
+  .blog-title {
+    margin: 1vw auto;
+    font-size: x-large;
+  }
+
+  .preview-post-title {
+    font-size: large;
+    margin-top: 1vh;
+  }
+
+  .blog {
+    padding: 0 2vw;
+  }
+
+  .twitter-timeline-div {
+    margin: 0 auto;
+    margin-top: 1vh;
+  }
+
+  .blog p {
+    margin: 0.5vh 0;
+  }
+
+  .tiny-text {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-media-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .twitter-timeline {
+    /* Cutting off too many posts */
+    width: 300px;
+    height: 70vh; /* !important; /* Adjust this value as needed */
+    overflow: hidden;
+    /* Social Media Grid */
+    grid-column: 1 / 3;
+    grid-row: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px 12px 12px 12px / 10px 10px 10px 10px;
+  }
+
+  .instagram-media {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    /* CONTROLS WIDTH USE !IMPORTANT */
+    width: 95vw !important;
+    margin: 0 auto;
+  }
+
+  .instagram-profile {
+    margin: 0 auto;
+  }
+
+  .blog-title {
+    margin: 1vw auto;
+    font-size: x-large;
+  }
+
+  .preview-post-title {
+    font-size: large;
+    margin-top: 1vh;
+  }
+
+  .blog {
+    padding: 0 2vw;
+  }
+
+  .twitter-timeline-div {
+    margin: 0 auto;
+    margin-top: 1vh;
+  }
+
+  .front-page-container {
+    width: 100%;
+  }
+
+  .blog p {
+    margin: 0.5vh 0;
+  }
+
+  .tiny-text {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-media-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .twitter-timeline {
+    width: 300px;
+    height: 495px;
+  }
+
+  .instagram-media {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    /* CONTROLS WIDTH USE !IMPORTANT */
+    width: 95vw !important;
+    margin: 0 auto;
+  }
+
+  .instagram-profile {
+    margin: 0 auto;
+  }
+
+  .blog-title {
+    margin: 1vw auto;
+    font-size: x-large;
+  }
+
+  .preview-post-title {
+    font-size: large;
+    margin-top: 1vh;
+  }
+
+  .blog {
+    padding: 0 2vw;
+  }
+
+  .twitter-timeline-div {
+    margin: 0 auto;
+    margin-top: 1vh;
+  }
+
+  .front-page-container {
+    width: 100%;
+  }
+
+  .blog p {
+    margin: 0.5vh 0;
+  }
+
+  .tiny-text {
+    display: none;
+  }
+}

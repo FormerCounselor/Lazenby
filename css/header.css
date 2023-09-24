@@ -1,0 +1,319 @@
+.header-li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 15px;
+  text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-nav {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #dacbb4;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-nav a {
+  color: #774e2a;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+  text-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-books {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  text-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-book-covers {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.best-sellers,
+.books-overlay {
+  display: none;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.header-book-container {
+  width: 10vw;
+  align-items: center;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1vw;
+}
+
+.db-overlay {
+  margin: 0 auto;
+  width: 100vw;
+  background-color: #dacbb4;
+  color: #774e2a;
+  text-align: center;
+  height: 10vw;
+  position: relative;
+  top: -2vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+  font-weight: bolder;
+  border-radius: 4px;
+  border-color: black;
+  align-items: center;
+  justify-content: center;
+}
+/* Large Desktops */
+@media (max-width: 1440px) {
+  .header-nav {
+    margin-top: 1vh;
+  }
+
+  .books-overlay ul li {
+    padding: 8px 10px;
+  }
+
+  .header-nav .header-ul,
+  .books-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .books-overlay ul li a {
+    color: #774e2a;
+  }
+
+  .books-overlay {
+    display: none;
+    position: relative;
+    background-color: #dacbb4;
+    border: 1px solid #774e2a;
+    list-style-type: none;
+    border-color: #774e2a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  .header-books {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .header-book-container {
+    width: 25vw;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5vw;
+  }
+}
+/* Desktops */
+@media (max-width: 1024px) {
+  .books-overlay {
+    display: none;
+    position: relative;
+    top: -1.5vh;
+    background-color: #dacbb4;
+    border: 1px solid #774e2a;
+    list-style-type: none;
+    border-color: #774e2a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  .header-books {
+    display: none;
+  }
+
+  .best-sellers {
+    display: contents;
+  }
+
+  .books-overlay a {
+    color: #774e2a;
+  }
+  .header-nav .header-ul,
+  .books-overlay ul {
+    list-style: none;
+    padding: 0; /* This is to remove any default padding on the list */
+    margin: 0; /* This is to remove any default margin on the list */
+  }
+
+  .header-ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding-inline-start: 0;
+    align-items: center;
+    margin-top: 0;
+  }
+  .books-overlay ul li {
+    padding: 8px 10px;
+  }
+}
+/* Large Tablet */
+@media (max-width: 768px) {
+  .header-nav {
+    margin-top: 0;
+  }
+
+  .header-ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding-inline-start: 0;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .header-li {
+    display: block;
+    padding: 5px 10px;
+  }
+
+  .header-books {
+    display: none;
+  }
+
+  .books-overlay ul li a {
+    color: #774e2a; /* replace '#desiredColor' with the color you want, e.g., #ff0000 for red */
+  }
+
+  .books-overlay {
+    display: none;
+    position: relative;
+    top: 0.1vh;
+    background-color: #dacbb4;
+    border: 1px solid #774e2a;
+    list-style-type: none;
+    border-color: #774e2a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  .books-overlay ul li {
+    padding: 8px 10px;
+  }
+
+  .header-nav .header-ul,
+  .books-overlay ul {
+    list-style: none;
+    padding: 0; /* This is to remove any default padding on the list */
+    margin: 0; /* This is to remove any default margin on the list */
+  }
+}
+/* Small Tablet */
+@media (max-width: 600px) {
+  .header-nav {
+    margin-top: 0;
+  }
+
+  .header-ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding-inline-start: 0;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .header-li {
+    display: block;
+    padding: 5px 10px;
+  }
+
+  .header-books {
+    display: none;
+  }
+
+  .books-overlay ul li a {
+    color: #774e2a; /* replace '#desiredColor' with the color you want, e.g., #ff0000 for red */
+  }
+
+  .books-overlay {
+    display: none;
+    position: relative;
+    top: 0vh;
+    background-color: #dacbb4;
+    border: 1px solid #774e2a;
+    list-style-type: none;
+    border-color: #774e2a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  .books-overlay ul li {
+    padding: 8px 10px;
+  }
+
+  .header-nav .header-ul,
+  .books-overlay ul {
+    list-style: none;
+    padding: 0; /* This is to remove any default padding on the list */
+    margin: 0; /* This is to remove any default margin on the list */
+  }
+}
+/* Mobile - DONE */
+@media (max-width: 480px) {
+  .header-nav {
+    margin-top: 0;
+  }
+
+  .header-ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding-inline-start: 0;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .header-li {
+    display: block;
+    padding: 5px 10px;
+  }
+
+  .header-books {
+    display: none;
+  }
+
+  .books-overlay ul li a {
+    color: #774e2a; /* replace '#desiredColor' with the color you want, e.g., #ff0000 for red */
+  }
+
+  .books-overlay {
+    display: none;
+    position: relative;
+    background-color: #dacbb4;
+    border: 1px solid #774e2a;
+    list-style-type: none;
+    border-color: #774e2a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  .books-overlay ul li {
+    padding: 8px 10px;
+  }
+
+  .header-nav .header-ul,
+  .books-overlay ul {
+    list-style: none;
+    padding: 0; /* This is to remove any default padding on the list */
+    margin: 0; /* This is to remove any default margin on the list */
+  }
+}

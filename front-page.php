@@ -6,95 +6,81 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Website</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
 
+
+
+
 <body>
-  <!-- <div class="navbarContainer">
-    <div class="navbar">
-      <div class="listItem">
-        <p>Discussion Board</p>
-      </div>
-      <div class="listItem">
-        <p>Magic: The Life of Earvin "Magic" Johnson</p>
-      </div>
-      <div class="listItem">
-        <p>Michael Jordan: The Life</p>
-      </div>
-      <div class="listItem">
-        <p>Buy Books By Roland</p>
-        <ul class="listItem overlay" id="buyBooks">
-          <li>
-            <span class="ListItem">Book No Further</span>
-            <br />
-            <span class="subTitle">Three Recent Books</span>
-          </li>
+  <div class="front-page-container">
+    <div class="social-media-grid">
+      <div class="twitter-timeline-div">
 
-          <li>
-            <span class="ListItem">Barnes & Noble</span>
-            <br />
-            <span class="subTitle">All Books</span>
-          </li>
+        <a class="twitter-timeline" data-lang="en" href="https://twitter.com/lazenby?ref_src=twsrc%5Etfw">Tweets by lazenby</a>
+        <div class="twitter-button-container">
+          <a href="https://twitter.com/lazenby?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @lazenby</a>
+          <a href="https://twitter.com/intent/tweet?screen_name=lazenby&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @lazenby</a>
+        </div>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
 
-          <li>
-            <span class="ListItem">Amazon</span>
-            <br />
-            <span class="subTitle">All Books</span>
-          </li>
-        </ul>
+      <div class="blog">
+        <h1 class="blog-title">Roland's latest thoughts</h1>
+        <?php
+        $homepagePosts = new WP_Query(array(
+          'posts_per_page' => 3
+        ));
+
+        while ($homepagePosts->have_posts()) {
+          $homepagePosts->the_post(); ?>
+          <div>
+
+            <div>
+              <h2 class="preview-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></h2>
+              <a class="tiny-text" href="<?php the_permalink(); ?>">
+                <span><?php the_time('M'); ?></span>
+                <span><?php the_time('d'); ?></span>
+              </a>
+              <p><?php echo wp_trim_words(get_the_content(), 18); ?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
+            </div>
+          </div>
+        <?php }
+        wp_reset_postdata();
+        ?>
+        <p><a href="<?php echo site_url('/blog') ?>">View All Blog Posts</a></p>
+
       </div>
-      <div class="listItem">
-        <p>About Roland</p>
+
+      <div class="instagram-profile">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/rllazenby/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+          <div class="instagram-media-content">
+            <a href="https://www.instagram.com/rllazenby/?utm_source=ig_embed&amp;utm_campaign=loading" class="instagram-link" target="_blank">
+              <div class="profile-header">
+                <div class="profile-avatar"></div>
+                <div class="profile-details">
+                  <div class="profile-name"></div>
+                  <div class="profile-username"></div>
+                </div>
+              </div>
+              <div class="cta-padding"></div>
+              <!-- SVG part and other content ... -->
+            </a>
+          </div>
+        </blockquote>
       </div>
+      <script async src="//www.instagram.com/embed.js"></script>
+
     </div>
-  </div> -->
-  <div class="socialMedia"></div>
-  <!-- Your other content goes here -->
-  <script src="style.js"></script>
+  </div>
+  </div>
+  </div>
+
 </body>
 
 </html>
-<html>
 
-</html>
+<?php get_footer();
 
-<h2>Roland's latest thoughts</h2>
-<?php
-$homepagePosts = new WP_Query(array(
-  'posts_per_page' => 2
-));
-
-while ($homepagePosts->have_posts()) {
-  $homepagePosts->the_post(); ?>
-  <div class="">
-    <a class="" href="<?php the_permalink(); ?>">
-      <span class=""><?php the_time('M'); ?></span>
-      <span class=""><?php the_time('d'); ?></span>
-    </a>
-    <div class="">
-      <h5 class=""><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-      <p><?php echo wp_trim_words(get_the_content(), 18); ?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
-    </div>
-  </div>
-<?php }
-wp_reset_postdata();
 ?>
-
-
-
-
-<p class="t-center no-margin"><a href="<?php echo site_url('/blog') ?>" class="btn btn--yellow">View All Blog Posts</a></p>
-
-
-
-<!-- <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/bus.jpg'); ?>);">
-
-  <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/apples.jpg'); ?>);">
-
-    <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/bread.jpg'); ?>);"> -->
-
-
-<!-- <?php get_footer();
-
-      ?> -->

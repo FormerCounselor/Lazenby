@@ -8,34 +8,91 @@
 </head>
 
 <body>
+  <!-- Modal -->
+  <div class="modal" id="promoModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <a href="https://www.amazon.com/Magic-Life-Earvin-Johnson-ebook/dp/B0BQGGXQQN">
+        <img class="magic-promo" src="http://roland.lazenby.local/wp-content/uploads/2023/09/magic_modal_promo.png" />
+      </a>
+      <p>Pre-order now!</p>
+      <div class="book-links">
+        <?php $bookLinks = get_book_links(); ?>
+        <div class="book-links">
+          <?php foreach ($bookLinks as $book) : ?>
+            <a href="<?php echo $book['link']; ?>">
+              <img src="http://roland.lazenby.local/wp-content/themes/lazenby/images/vendor_icons/<?php echo $book['icon']; ?>" />
+            </a>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- <body <?php body_class(); ?>> -->
-  <nav class="header_nav">
-    <ul>
-      <?php if (get_post_field('post_name') !== 'home-2') : ?>
-        <li class="header_li"><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
-      <?php endif; ?>
+  <!-- 5 books he wants -->
+  <div class="header-books">
+    <?php
+    $header_books = new WP_Query(['post_type' => 'books', 'category_name' => 'header']);
+    while ($header_books->have_posts()) : $header_books->the_post();
+    ?>
+      <div class="header-book-container">
+        <a href="<?php the_permalink(); ?>">
+          <?php $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail');
+          echo '<img class="header-book-covers" src="' . esc_url($image_url[0]) . '" alt="Image">'; ?>
 
-      <?php if (get_the_id() !== 29) : ?>
-        <li class="header_li"><a href="<?php echo esc_url(home_url('/blog')); ?>">Blog</a></li>
-      <?php endif; ?>
+          <a class="nav-book-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </a>
+      </div>
+    <?php endwhile;
+    wp_reset_postdata(); ?>
+  </div>
 
-      <?php if (get_post_field('post_name') !== 'buy-books-by-roland') : ?>
-        <li class="header_li"><a href="<?php echo esc_url(home_url('/buy-books-by-roland')); ?>">Buy Books By Roland</a></li>
-      <?php endif; ?>
+  <nav class="header-nav">
+    <ul class="header-ul">
+      <li class="header-li"><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
 
-      <?php if (get_post_field('post_name') !== 'discussion-board') : ?>
-        <li class="header_li"><a href="<?php echo esc_url(home_url('/discussion-board')); ?>">Discussion Board</a></li>
-      <?php endif; ?>
+      <li class="header-li"><a href="<?php echo esc_url(home_url('/blog')); ?>">Roland's Notepad</a></li>
 
-      <?php if (get_post_field('post_name') !== 'social-media') : ?>
-        <li class="header_li"><a href="<?php echo esc_url(home_url('/social-media')); ?>">Social Media</a></li>
-      <?php endif; ?>
+      <li class="header-li"><a href="<?php echo esc_url(home_url('/buy-books-by-roland')); ?>">Other Books By Roland</a></li>
 
-      <?php if (get_post_field('post_name') !== 'about-roland') : ?>
-        <li class="header_li"><a href="<?php echo esc_url(home_url('/about-roland')); ?>">About Roland</a></li>
-      <?php endif; ?>
+      <li class="header-li strikethrough"><a href="">Discussion Board</a></li>
+
+      <li class="header-li"><a href="<?php echo esc_url(home_url('/about-roland')); ?>">About Roland</a></li>
+      <li class="header-li best-sellers"><a href="">Best Sellers by Roland</a></li>
     </ul>
   </nav>
+
+  <div class="db-overlay">
+    <h1>Coming Soon</h1>
+  </div>
+
+  <div class="books-overlay">
+    <ul>
+      <?php
+      $header_books = new WP_Query(['post_type' => 'books', 'category_name' => 'header']);
+      while ($header_books->have_posts()) : $header_books->the_post();
+      ?>
+        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+      <?php endwhile;
+      wp_reset_postdata(); ?>
+    </ul>
+  </div>
+
+
+
+
+  <?php if (current_user_can('administrator')) : ?>
+    <div style="position: fixed; bottom: 0; z-index: 9999; padding: 5px;">
+      <?php global $template;
+      echo basename($template); ?>
+    </div>
+  <?php endif; ?>
+
+
+
+
 
 
   <!-- <ul>

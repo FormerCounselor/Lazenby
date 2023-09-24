@@ -1,0 +1,856 @@
+/*  */
+
+.books {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  grid-template-rows: 1fr;
+  grid-gap: 50px;
+}
+
+.book-description p:first-of-type {
+  margin-top: 0;
+}
+
+.book-title {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.book-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 10px;
+  line-height: 1vh;
+}
+
+.category-container .wp-post-image {
+  margin-bottom: 15px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* books nav */
+.book-container {
+  width: 240px;
+  align-items: center;
+  padding: 0;
+}
+
+.bio-books,
+.nfl-books,
+.nba-books,
+.foreign {
+  display: grid;
+  gap: 3vh 1.5vw;
+  justify-items: center;
+}
+
+.nba-books {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.nfl-books {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bio-books,
+.foreign {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.nav-book-title {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.3vh;
+}
+
+nav.nav-book-title {
+  margin-top: 0;
+}
+
+.size-350x529 {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.book-links img {
+  box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+}
+
+.book-cover {
+  margin: 0 auto 2vh auto;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.book-media {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .category-container .wp-post-image {
+    width: 20vw;
+    height: auto;
+  }
+
+  .category-container .wp-post-image {
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* books nav */
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .book-container {
+    width: 25vw;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+  }
+
+  .category-container .book-heading {
+    width: 100%;
+    font-size: large;
+    text-align: center;
+    margin: 3vh 0 2vh 0;
+  }
+
+  .nba-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .nfl-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .bio-books .book-container:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .nfl-books .book-container:last-child {
+    grid-column: span 2;
+  }
+
+  .bio-books,
+  .foreign {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .bio-books a {
+    font-size: small;
+  }
+
+  .category-container .book-heading {
+    width: 100%;
+    font-size: large;
+    text-align: center;
+    margin: 3vh 0 2vh 0;
+  }
+
+  .nav-book-title {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  nav.nav-book-title {
+    margin-top: 0;
+  }
+
+  /* single-books.php */
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    overflow: auto; /* To clear the float */
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-gap: unset;
+  }
+
+  .book-media {
+    float: left;
+    width: 60%;
+  }
+
+  .book-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    line-height: 3vh;
+    width: 50vw;
+    margin: 0 auto 1vh auto;
+  }
+
+  .book-links img {
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    width: 48px;
+    height: auto;
+  }
+
+  .book-cover {
+    height: auto;
+    width: 30vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .book-description p {
+    margin: 2vh 0;
+  }
+
+  .book-title {
+    text-align: center;
+    font-size: x-large;
+    margin: 2vh 0;
+  }
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto; /* This clears the floated children elements */
+  }
+}
+/* Desktops */
+@media (max-width: 1024px) {
+  .category-container .wp-post-image {
+    width: 25vw;
+    height: auto;
+  }
+
+  .category-container .wp-post-image {
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* books nav */
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .book-container {
+    width: 25vw;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+  }
+
+  .category-container .book-heading {
+    font-size: large;
+    text-align: center;
+    margin: 1vh;
+  }
+  .bio-books,
+  .nfl-books,
+  .nba-books,
+  .foreign {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1vh 0;
+  }
+
+  .bio-books,
+  .nfl-books,
+  .nba-books,
+  .foreign {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1vh 0;
+  }
+
+  .nba-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .nfl-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .nfl-books .book-container:last-child {
+    grid-column: span 2;
+  }
+
+  .bio-books,
+  .foreign {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+  }
+
+  .bio-books a {
+    font-size: small;
+  }
+
+  .category-container .book-heading {
+    font-size: large;
+    text-align: center;
+    margin: 1vh;
+  }
+
+  .nav-book-title {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  nav.nav-book-title {
+    margin-top: 0;
+  }
+
+  /* single-books.php */
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    overflow: auto; /* To clear the float */
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-gap: unset;
+  }
+
+  .book-media {
+    float: left;
+    width: 60%;
+  }
+
+  .book-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    line-height: 3vh;
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .book-links img {
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+    width: 7vw;
+    height: auto;
+  }
+
+  .book-cover {
+    height: auto;
+    width: 50vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .book-description p {
+    margin: 2vh 0;
+  }
+
+  .book-title {
+    text-align: center;
+    font-size: x-large;
+    margin: 2vh 0;
+  }
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto; /* This clears the floated children elements */
+  }
+}
+/* Large Tablet */
+@media (max-width: 768px) {
+  .category-container .wp-post-image {
+    width: 25vw;
+    height: auto;
+  }
+
+  .category-container .wp-post-image {
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* books nav */
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .book-container {
+    width: 25vw;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+  }
+
+  /* .bio-books,
+    .nfl-books,
+    .nba-books,
+    .foreign {
+      display: grid;
+      justify-items: center;
+      gap: 1.5vh 1.5vw;
+    } */
+
+  .bio-books,
+  .nfl-books,
+  .nba-books,
+  .foreign {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1vh 0;
+  }
+
+  .nba-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .nfl-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .nfl-books .book-container:last-child {
+    grid-column: span 2;
+  }
+
+  .bio-books,
+  .foreign {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+  }
+
+  .bio-books a {
+    font-size: small;
+  }
+
+  .category-container .book-heading {
+    font-size: large;
+    text-align: center;
+    margin: 1vh;
+  }
+
+  .nav-book-title {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  nav.nav-book-title {
+    margin-top: 0;
+  }
+
+  /* single-books.php */
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    overflow: auto; /* To clear the float */
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-gap: unset;
+  }
+
+  .book-media {
+    float: left;
+    width: 60%;
+  }
+
+  .book-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    line-height: 3vh;
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .book-links img {
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 7vw;
+    height: auto;
+  }
+
+  .book-cover {
+    height: auto;
+    width: 50vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .book-description p {
+    margin: 2vh 0;
+  }
+
+  .book-title {
+    text-align: center;
+    font-size: large;
+    margin: 2vh 0;
+  }
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto; /* This clears the floated children elements */
+  }
+}
+/* Small Tablet */
+@media (max-width: 600px) {
+  .category-container .wp-post-image {
+    width: 25vw;
+    height: auto;
+  }
+
+  .category-container .wp-post-image {
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* books nav */
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .book-container {
+    width: 25vw;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+  }
+
+  /* .bio-books,
+  .nfl-books,
+  .nba-books,
+  .foreign {
+    display: grid;
+    justify-items: center;
+    gap: 1.5vh 1.5vw;
+  } */
+
+  .bio-books,
+  .nfl-books,
+  .nba-books,
+  .foreign {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1vh 0;
+  }
+
+  .nba-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .nfl-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .nfl-books .book-container:last-child {
+    grid-column: span 2;
+  }
+
+  .bio-books,
+  .foreign {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+  }
+
+  .bio-books a {
+    font-size: small;
+  }
+
+  .category-container .book-heading {
+    font-size: large;
+    text-align: center;
+    margin: 1vh;
+  }
+
+  .nav-book-title {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  nav.nav-book-title {
+    margin-top: 0;
+  }
+
+  /* single-books.php */
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    overflow: auto; /* To clear the float */
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-gap: unset;
+  }
+
+  .book-media {
+    float: left;
+    width: 60%;
+  }
+
+  .book-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    line-height: 1vh;
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .book-links img {
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .book-cover {
+    height: auto;
+    width: 50vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .book-description p {
+    margin: 2vh 0;
+  }
+
+  .book-title {
+    text-align: center;
+    font-size: large;
+    margin: 2vh 0;
+  }
+
+  .books {
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto; /* This clears the floated children elements */
+  }
+
+  /* Additional styles for book-cover and book-links remain unchanged */
+}
+/* ***Small Tablet - END *** */
+/* Mobile - DONE */
+@media (max-width: 480px) {
+  .category-container .wp-post-image {
+    width: 100px;
+    height: 150px;
+  }
+
+  .category-container .wp-post-image {
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* books nav */
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .book-container {
+    width: 40vw;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .bio-books,
+  .nfl-books,
+  .nba-books,
+  .foreign {
+    display: grid;
+    justify-items: center;
+    gap: 1.5vh 1.5vw;
+  } */
+
+  .bio-books,
+  .nfl-books,
+  .nba-books,
+  .foreign {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1vh 0;
+  }
+
+  .nba-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .nfl-books {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .nfl-books .book-container:last-child {
+    grid-column: span 2;
+  }
+
+  .bio-books,
+  .foreign {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+  }
+
+  .bio-books a {
+    font-size: small;
+  }
+
+  .category-container .book-heading {
+    font-size: large;
+    text-align: center;
+    margin: 1vh;
+  }
+
+  .nav-book-title {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  nav.nav-book-title {
+    margin-top: 0;
+  }
+
+  /* single-books.php */
+
+  .books {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    grid-gap: 1vh;
+  }
+
+  .book-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    line-height: 1vh;
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .book-links img {
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* .size-350x529 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5vh;
+    width: 200px;
+    height: 300px;
+  } */
+
+  .book-media {
+    margin: 0 auto;
+    width: unset;
+  }
+
+  .book-cover {
+    height: auto;
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5vh;
+    box-shadow: 0px 8px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .book-description p {
+    margin: 1vh 0;
+  }
+
+  .book-title {
+    text-align: center;
+    font-size: large;
+    margin: 2vh 0;
+  }
+}

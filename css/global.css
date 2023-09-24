@@ -1,0 +1,199 @@
+html {
+  background-color: #774e2a;
+  font-family: Calibri, sans-serif;
+  color: #dacbb4;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: #af9a7b;
+}
+
+a:hover {
+  text-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5);
+  color: #7c6542;
+}
+
+.heading-one {
+  text-align: center;
+  margin: 1vh 0;
+}
+
+.heading-three {
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+  margin: 1vh 0;
+}
+
+.tiny-text {
+  font-size: small;
+}
+
+.page-container {
+  width: 70%;
+  /* justify-content: center; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.front-page-container {
+  width: 75vw;
+  /* justify-content: center; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.front-page-container .preview-post-title {
+  margin-bottom: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.roland-courtside {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0px 8px 4px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1440px) {
+  .roland-courtside {
+    width: 60vw;
+    height: auto;
+    margin-bottom: 3vh;
+  }
+
+  .heading-one {
+    font-size: x-large;
+  }
+
+  .front-page-container {
+    display: flex;
+  }
+  html {
+    margin-top: 0;
+  }
+
+  .page-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .front-page-container {
+    margin-top: 2vh;
+    width: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  .roland-courtside {
+    width: 70vw;
+    height: auto;
+    margin-bottom: 3vh;
+  }
+
+  .heading-one {
+    font-size: x-large;
+  }
+
+  .front-page-container {
+    display: flex;
+  }
+  html {
+    margin-top: 0;
+  }
+
+  .page-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .front-page-container {
+    margin-top: 2vh;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .roland-courtside {
+    width: 70vw;
+    height: auto;
+    margin-bottom: 3vh;
+  }
+
+  .heading-one {
+    font-size: x-large;
+  }
+
+  .front-page-container {
+    display: flex;
+  }
+  html {
+    margin-top: 0;
+  }
+
+  .page-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .roland-courtside {
+    width: 70vw;
+    height: auto;
+    margin-bottom: 3vh;
+  }
+
+  .heading-one {
+    font-size: large;
+  }
+
+  .front-page-container {
+    display: flex;
+  }
+  html {
+    margin-top: 0;
+  }
+
+  .page-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .about-roland {
+    font-size: small;
+  }
+}
+
+@media (max-width: 480px) {
+  .roland-courtside {
+    width: 70vw;
+    height: auto;
+    margin-bottom: 3vh;
+  }
+
+  .about-roland {
+    font-size: small;
+  }
+
+  .heading-one {
+    font-size: large;
+  }
+
+  .front-page-container {
+    display: flex;
+  }
+  html {
+    margin-top: 0;
+  }
+
+  .page-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}

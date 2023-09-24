@@ -1,6 +1,10 @@
 <?php
 
-/* Template Name: Library */
+/* Template Name: Single Book Display
+
+
+
+*/
 ?>
 <?php get_header(); ?>
 <html lang="en">
@@ -12,19 +16,21 @@
 </head>
 
 <body>
-  <?php
-  // Get the ACF field value
-  $template_type = get_field('template_type');
+  <h3 class="book-title">
+    <?php the_title(); ?>
+  </h3>
+  <div class="books">
+    <div class="book-media">
+      <img class="book-cover" src="<?php the_post_thumbnail('350x529'); ?>
+      <div class=" book-links">
+      <?php the_content(); ?>
+    </div>
+  </div>
+  <div class="book-description">
+    <?php esc_html(the_field('book_description')); ?>
+  </div>
 
-  // Use it to include different template parts
-  if ($template_type == 'main-books-nav') {
-    get_template_part('template-parts/main-books-nav');
-  } elseif ($template_type == 'nba-nav') {
-    get_template_part('template-parts/nba-nav');
-  } else {
-    get_template_part('template-parts/library');
-  }
-  ?>
+  </div>
 </body>
 
 

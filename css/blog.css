@@ -1,0 +1,18 @@
+@media (max-width: 480px) {
+  .blog-page-container {
+    margin: 1vh 1vw;
+  }
+
+  .post-title {
+    font-size: larger;
+    margin: 1vh 0;
+  }
+
+  .metabox {
+    display: none;
+  }
+
+  .blog-content p {
+    margin: 1.5vh 0;
+  }
+}

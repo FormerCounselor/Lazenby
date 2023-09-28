@@ -1,15 +1,22 @@
 <?php
 function roland_files()
 {
-  // Use filemtime for versioning in development to bypass cache
-  $theme_version = filemtime(get_stylesheet_directory() . '/build/index.css');
 
-  wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), $theme_version, true);
-  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
-  wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-  wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'), array(), $theme_version);
-  wp_enqueue_style('lazenby_main_styles', get_stylesheet_directory_uri() . '/CSS/stylies-min.css', array(), filemtime(get_stylesheet_directory() . '/CSS/stylies-min.css'));
+  // Initialize variables
+
+  $path = get_stylesheet_directory() . '/css/stylies-min.css';
+  $uri = get_stylesheet_directory_uri() . '/css/stylies-min.css';
+
+  var_dump(file_exists($path));  // Should print bool(true) if the file exists
+  var_dump($path); // Should print the absolute path to your stylesheet
+  var_dump($uri);  // Should print the URI to your stylesheet
+
+  // ... rest of your code
+
+  wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'));
+  wp_enqueue_style('university_main_styles', get_theme_file_uri('/css/stylies-min.css'));
 }
+
 
 function get_book_links()
 {

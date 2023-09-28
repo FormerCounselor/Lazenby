@@ -13,7 +13,7 @@
     <div class="modal-content">
       <span class="close-btn" id="closeBtn">&times;</span>
       <a href="https://www.amazon.com/Magic-Life-Earvin-Johnson-ebook/dp/B0BQGGXQQN">
-        <img class="magic-promo" src="http://roland.lazenby.local/wp-content/uploads/2023/09/magic_modal_promo.png" />
+        <img class="magic-promo" src="http://roland.lazenby.media/wp-content/uploads/2023/09/magic_modal_promo.png" />
       </a>
       <p>Pre-order now!</p>
       <div class="book-links">
@@ -21,7 +21,7 @@
         <div class="book-links">
           <?php foreach ($bookLinks as $book) : ?>
             <a href="<?php echo $book['link']; ?>">
-              <img src="http://roland.lazenby.local/wp-content/themes/lazenby/images/vendor_icons/<?php echo $book['icon']; ?>" />
+              <img src="http://roland.lazenby.media/wp-content/themes/lazenby/images/vendor_icons/<?php echo $book['icon']; ?>" />
             </a>
           <?php endforeach; ?>
         </div>

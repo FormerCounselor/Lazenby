@@ -2,16 +2,6 @@
 function roland_files()
 {
 
-  // Initialize variables
-
-  $path = get_stylesheet_directory() . '/css/stylies-min.css';
-  $uri = get_stylesheet_directory_uri() . '/css/stylies-min.css';
-
-  var_dump(file_exists($path));  // Should print bool(true) if the file exists
-  var_dump($path); // Should print the absolute path to your stylesheet
-  var_dump($uri);  // Should print the URI to your stylesheet
-
-  // ... rest of your code
 
   wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'));
   wp_enqueue_style('university_main_styles', get_theme_file_uri('/css/stylies-min.css'));

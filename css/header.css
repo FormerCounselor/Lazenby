@@ -38,8 +38,7 @@
 }
 
 .best-sellers,
-.books-overlay,
-.db-overlay {
+.books-overlay {
   display: none;
 }
 
@@ -65,7 +64,7 @@
   text-align: center;
   height: 15vw;
   position: relative;
-  top: -2vw;
+  top: 0vw;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-size: larger;
   font-weight: bolder;
@@ -125,7 +124,7 @@
   .books-overlay {
     display: none;
     position: relative;
-    top: -1.5vh;
+    top: 0vh;
     background-color: #dacbb4;
     border: 1px solid #774e2a;
     list-style-type: none;

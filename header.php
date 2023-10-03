@@ -57,7 +57,7 @@
 
       <li class="header-li"><a href="<?php echo esc_url(home_url('/buy-books-by-roland')); ?>">Other Books By Roland</a></li>
 
-      <li class="header-li strikethrough"><a href="">Discussion Board</a></li>
+      <li class="header-li strikethrough"><a href="javascript:void(0)">Discussion Board</a></li>
 
       <li class="header-li"><a href="<?php echo esc_url(home_url('/about-roland')); ?>">About Roland</a></li>
       <li class="header-li best-sellers"><a href="">Best Sellers by Roland</a></li>

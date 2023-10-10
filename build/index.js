@@ -74,45 +74,38 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 // New code for 'strikethrough' link and dbOverlay
-document.addEventListener("DOMContentLoaded", function () {
-  const strikethroughLink = document.querySelector(".strikethrough")
-  const dbOverlay = document.querySelector(".db-overlay")
+// document.addEventListener("DOMContentLoaded", function () {
+//   const strikethroughLink = document.querySelector(".strikethrough")
+//   const dbOverlay = document.querySelector(".db-overlay")
 
-  if (!strikethroughLink || !dbOverlay) {
-    //    console.log("Either strikethroughLink or dbOverlay is missing")
-    return
-  }
+//   if (!strikethroughLink || !dbOverlay) {
+//     return
+//   }
 
-  let dbOverlayTimeout
+//   let dbOverlayTimeout
 
-  dbOverlay.style.display = "none"
+//   dbOverlay.style.display = "none"
 
-  strikethroughLink.addEventListener("click", function (e) {
-    e.preventDefault()
-    e.stopPropagation()
-    //    console.log("'strikethrough' link clicked")
+//   strikethroughLink.addEventListener("click", function (e) {
+//     e.preventDefault()
+//     e.stopPropagation()
 
-    clearTimeout(dbOverlayTimeout)
+//     clearTimeout(dbOverlayTimeout)
 
-    if (dbOverlay.style.display === "none" || !dbOverlay.style.display) {
-      //      console.log("Displaying the dbOverlay.")
-      dbOverlay.style.display = "flex"
-      dbOverlayTimeout = setTimeout(function () {
-        //        console.log("Hiding the dbOverlay after 1 second.")
-        dbOverlay.style.display = "none"
-      }, 1000)
-    } else {
-      //      console.log("Hiding the dbOverlay.")
-      dbOverlay.style.display = "none"
-    }
-  })
+//     if (dbOverlay.style.display === "none" || !dbOverlay.style.display) {
+//       dbOverlay.style.display = "flex"
+//       dbOverlayTimeout = setTimeout(function () {
+//         dbOverlay.style.display = "none"
+//       }, 1000)
+//     } else {
+//       dbOverlay.style.display = "none"
+//     }
+//   })
 
-  document.addEventListener("click", function (e) {
-    //    console.log("Document clicked.")
-    if (!strikethroughLink.contains(e.target) && !dbOverlay.contains(e.target)) {
-      //      console.log("Clicked outside the 'strikethrough' link and dbOverlay.")
-      clearTimeout(dbOverlayTimeout)
-      dbOverlay.style.display = "none"
-    }
-  })
-})
+//   document.addEventListener("click", function (e) {
+//     if (!strikethroughLink.contains(e.target) && !dbOverlay.contains(e.target)) {
+//       clearTimeout(dbOverlayTimeout)
+//       dbOverlay.style.display = "none"
+//     }
+//   })
+// })
